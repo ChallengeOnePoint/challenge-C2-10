@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+    <title>FullstackChallenge</title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body ng-controller='mainCtrl'>
+
+<spinner show="false" class="spinner" img-src="images/spinner.gif"></spinner>
+
+
+<div id='clickme' class='container' ng-show='true'>
+<div class = "title">
+  <p class="logo">AngularChallenge</p>
+
+</div>
+
+<div class="main-content">
+  <div class="block">
+
+    <p class ="section-title" >CONTENT</p>
+
+    <textarea name="content" type="text" ng-model="local.quote.content" class="quote-container" required></textarea>
+  </div>
+
+  <div class="block">
+
+    <p class ="section-title">TAGS</p>
+
+    <button ng-if="local.quote.tags && !propose_tags" ng-repeat="tag in local.quote.tags" class="btn btn-default btn-xs quote-tag-button">{{tag}}</button>
+    
+    <form ng-if="!propose_tags" ng-submit="local.addTag()">
+      <input class="btn btn-default btn-xs quote-tag-button" ng-blur="local.addTag()" ng-if="adding_tag" name="new_tag" type="text" ng-model="local.new_tag" class="quote-container"/>
+    </form>
+    
+    <button style="width:20%" ng-if="!propose_tags" ng-click="adding_tag=true" class="btn btn-default btn-xs quote-tag-add">+</button>
+
+    <my-tags ng-if="propose_tags" tags="local.tags" quote="local.quote"></my-tags>
+
+  </div>
+
+  <div class="block">
+
+    <p class ="section-title">URL</p>
+
+    <input name="content" type="text" ng-model="local.quote.url" class="quote-container" required/>
+
+  </div>
+
+  <div class="block">
+
+    <p class ="section-title">AUTHOR</p>
+
+    <input name="content" type="text" ng-model="local.quote.author" class="quote-container" required/>
+
+  </div>
+
+  <div class="block">
+
+    <p class ="section-title">SOURCE</p>
+
+    <input name="content" type="text" ng-model="local.quote.source" class="quote-container" required/>
+
+  </div>
+
+  <div class="block">
+
+    <p class ="section-title">CATEGORY</p>
+
+    <input name="content" type="text" ng-model="local.quote.category" class="quote-container" required/>
+
+  </div>
+
+  <div class="block">
+
+    <p class ="section-title">TITLE</p>
+
+    <input name="content" type="text" ng-model="local.quote.title" class="quote-container" required/>
+
+  </div>
+
+  <button class="btn btn-default center-block save-button" ng-click="local.saveQuote()">Save quote</button>
+</div>
+</div>
+
+    </div>
+    <script type="text/javascript" src="lib/jquery/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="lib/angular/angular.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/mainCtrl.js"></script>
+    <script type="text/javascript" src="app/tags.js"></script>
+    <script type="text/javascript" src="app/services.js"></script>
+    <script type="text/javascript" src="app/utils.js"></script>
+    <script type="text/javascript" src="lib/angular/angular-resource.js"></script>
+    <script type="text/javascript" src="lib/angular/angular-spinners.min.js"></script>
+</body>
+</html>

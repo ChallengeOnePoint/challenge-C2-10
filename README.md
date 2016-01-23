@@ -1,1 +1,2 @@
-# challenge-C2-10
+# ng-todo
+Quot.io extension for Chrome

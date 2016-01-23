@@ -1,0 +1,106 @@
+body {
+    width: 540px;
+    height:590px;
+}
+@font-face {
+	font-family: Gotham-Narrow-Medium;
+	src: url("/fonts/Gotham-Narrow-Medium.otf");
+}
+@font-face {
+	font-family: Gotham-Narrow-Book;
+	src: url("/fonts/Gotham-Narrow-Book.otf");
+}
+.ng-hide {
+  /* this is just another form of hiding an element */
+  display: block!important;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+.container{
+	background-color:#e9eaed;
+	margin:0 auto; 
+	padding:20px; 
+	padding-top:25px;
+}
+.logo{
+	font-family: Gotham-Narrow-Medium;
+    font-size: 1.45em;
+    position: fixed;
+    left: 40px;
+    top: 12px;
+    color: #0988DB !important;
+}
+.title{
+	/*font-family: Gotham-Narrow-Book;*/
+	height: 50px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
+.main-content{
+	padding-top:30px;
+
+}
+textarea{
+	height: 100px;
+}
+.quote-container{
+	font-family: Brela;
+	position: relative;
+    width: 100%;
+    padding: 8px;
+    background-color: white;
+    border: 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    border-radius: 3px;
+    outline:none!important;
+}
+.section-title{
+	font-family:Gotham-Narrow-Book;
+	font-size:.9em;
+	color:#0988D8
+}
+.block{
+	width:100%;
+	padding: 6px 20px 6px 20px;
+}
+.save-button{
+	background-color: #0988DB !important;
+    color: white !important;
+    border: none !important;
+    height: 28px;
+    width: 100px;
+    margin-top: 10px;
+    font-size: .9em;
+    font-family: Gotham-Narrow-Book;
+    outline: none !important;
+}
+.quote-tag-button{
+  font-family: Gotham-Narrow-Book;
+  color: #303030;
+  background-color: white !important;
+  outline: none !important;
+  box-shadow: none !important;
+  margin-right: 10px;
+  border-color: #EFEFEF !important;
+}
+.quote-tag-add{
+  font-family: Gotham-Narrow-Book;
+  font-size:1.5em;
+  color: #0988DB !important;
+  background-color: white !important;
+  outline: none !important;
+  box-shadow: none !important;
+  margin-right: 10px;
+	border: 1px solid;
+	border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+	border-radius: 3px;
+}
+.spinner{
+  position: fixed;
+  top:35%;
+  left:40%;
+}
